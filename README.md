@@ -1,27 +1,13 @@
 # Keithley-IV-Sweep
-A user-friendly Matlab app that imports, baselines, and peak fits Raman data for a wide variety of 2D materials (graphene, phosphorene, MoS2, WS2).
+Python (PyVisa) script for IV (Current-Voltage) measurements on a Keithley 2400 (GPIB/SCIP communication).
 
 
 Instructions:
 
-  1. Place the 'MatsLab2D.mlapp' file in your current directory and run it.
+  1. Install the necessary Python libraries (NumPy, SciPy, and MatPlotLib) and GPIB driver for Mac/Linux (http://www.ni.com/product-documentation/5458/en/) or Windows (http://www.ni.com/product-documentation/5326/en/).
 
-  2. Follow the in-app instructions to import, baseline, and peak fit your Raman data.
-
-
-Notes:
-
-  1. Error values for each fit value (location, intensity, and FWHM) can be seen after fitting by pressing the 'Errors' radio button.
-
-  2. The specific peaks chosen here represent only the primary modes seen in the literature. A variety of other modes exist and can be customized by changing the 'MatsLab2d.mlapp' source code (Lines 109-136) or by using my 'Raman-Peak-Analysis-for-2D-Materials' repository.
-
-
-References:
-
-  1. Graphene - Malard et al. 2009, Phys. Rep. 473:5.
-
-  2. MoS2 - Ramana et al. 2008, Geochem. Trans. 9:8.
-
-  3. Phosphorene - Brent et al. 2014 Chem. Comm. 50:13338.
+  2. Place the KeithleyIVSweep.py file in your home (or current Python) directory.
   
-  4. WS2 - Berkdemir et al. 2013 Sci. Rep. 3:1755.
+  3. From the command line (in Mac, just use Terminal), run 'python KeithleyIVSweep.py startV endV stepV outputfile'. 
+  
+  4. For example, an IV sweep from -100 mV to 100 mV with a step voltage of 1 mV would be obtained by running 'python KeithleyIVSweep.py -0.100 0.100 0.001 Sweep1.txt' where the output text file named Sweep1.txt would be created and stored in your home (or current Python) directory.
