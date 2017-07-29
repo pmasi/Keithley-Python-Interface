@@ -1,4 +1,4 @@
-# 2D-MatsLab
+# Keithley-IV-Sweep
 A user-friendly Matlab app that imports, baselines, and peak fits Raman data for a wide variety of 2D materials (graphene, phosphorene, MoS2, WS2).
 
 
