@@ -10,8 +10,8 @@ Instructions:
   
   3. From the command line (in Mac, just use Terminal), run the following command (depending on file):
   
-  'python KeithleyIVSweep.py startV stopV stepV outputfile'
-  'python KeithleyIVSweepFixedGate.py startV stopV stepV gateV outputfile'
-  'python KeithleyGateSweepFixedDrain.py startgateV stopgateV stepgateV drainV outputfile'
+    'python KeithleyIVSweep.py startV stopV stepV outputfile' 
+    'python KeithleyIVSweepFixedGate.py startV stopV stepV gateV outputfile'
+    'python KeithleyGateSweepFixedDrain.py startgateV stopgateV stepgateV drainV outputfile'
   
   4. For example, a gate from -20 V to 20 V with a step voltage of 1 V and drain voltage of 0.5 V would be obtained by running 'python KeithleyGateSweepFixedDrain.py -20 20 1 0.5 Hello.txt' where the output text file named Hello.txt would be created and stored in your home (or current Python) directory.
