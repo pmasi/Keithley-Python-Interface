@@ -6,8 +6,12 @@ Instructions:
 
   1. Install the necessary Python libraries (NumPy, SciPy, and MatPlotLib) and GPIB driver for Mac/Linux (http://www.ni.com/product-documentation/5458/en/) or Windows (http://www.ni.com/product-documentation/5326/en/).
 
-  2. Place the KeithleyIVSweep.py file in your home (or current Python) directory.
+  2. Place the KeithleyIVSweep.py, KeithleyIVSweepFixedGate.py, and/or KeithleyGateSweepFixedGate.py files in your home (or current Python) directory.
   
-  3. From the command line (in Mac, just use Terminal), run 'python KeithleyIVSweep.py startV endV stepV outputfile'. 
+  3. From the command line (in Mac, just use Terminal), run the following command (depending on file):
   
-  4. For example, an IV sweep from -100 mV to 100 mV with a step voltage of 1 mV would be obtained by running 'python KeithleyIVSweep.py -0.100 0.100 0.001 Sweep1.txt' where the output text file named Sweep1.txt would be created and stored in your home (or current Python) directory.
+  'python KeithleyIVSweep.py startV stopV stepV outputfile'
+  'python KeithleyIVSweepFixedGate.py startV stopV stepV gateV outputfile'
+  'python KeithleyGateSweepFixedDrain.py startgateV stopgateV stepgateV drainV outputfile'
+  
+  4. For example, a gate from -20 V to 20 V with a step voltage of 1 V and drain voltage of 0.5 V would be obtained by running 'python KeithleyGateSweepFixedDrain.py -20 20 1 0.5 Hello.txt' where the output text file named Hello.txt would be created and stored in your home (or current Python) directory.
